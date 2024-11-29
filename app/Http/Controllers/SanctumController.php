@@ -23,7 +23,6 @@ class SanctumController extends Controller
     public function issueToken(Request $request): Response
     {
         try {
-
             $dataArray = ($request->toArray() !== []) ? $request->toArray() : $request->json()->all();
             return new Response(
                 $this->service->issueToken($dataArray),

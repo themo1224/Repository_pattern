@@ -10,7 +10,7 @@ class SanctumValidator
 {
     public function validateIssueToken(array $rawData): void
     {
-        $validator = validator($rawData, [
+        $validator = \validator($rawData, [
             'email' => 'required|email',
             'password' => 'required|string',
             'device' => 'required|string',
